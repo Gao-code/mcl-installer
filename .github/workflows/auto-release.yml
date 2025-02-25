@@ -126,7 +126,11 @@ jobs:
             args: --features rustls
             target: x86_64-unknown-linux-musl
             release_name: mcl-installer-${{ needs.create_release.outputs.commit_id }}-linux-amd64-musl
-
+          - os: ubuntu-latest
+            file: mcl-installer
+            args: --features rustls
+            target: s390x-unknown-linux-musl
+            release_name: mcl-installer-${{ needs.create_release.outputs.commit_id }}-linux-s390x-musl
           - os: ubuntu-latest
             file: mcl-installer
             args: --features rustls
